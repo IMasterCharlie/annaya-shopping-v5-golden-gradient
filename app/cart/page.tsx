@@ -31,7 +31,7 @@ export default function CartPage() {
       .join('\n');
 
     const message = `Hello Annaya Boutique! 🛍️\nI'd like to place an order for:\n\n${itemsList}\n\n*Total: ${formatPrice(subtotal)}*\n\nPlease confirm availability!`;
-    window.open(`https://wa.me/917494954286?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   if (cart.length === 0) {

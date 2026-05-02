@@ -100,7 +100,7 @@ export const Footer = () => {
               Mumbai, MH 400001
             </p>
             <a
-              href="https://wa.me/917494954286"
+              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
               className="inline-flex items-center space-x-3 px-6 py-3 rounded-full [background:var(--background-whatsapp)] text-ivory font-bold text-sm shadow-[0_0_20px_rgba(37,211,102,0.25)] hover:scale-105 hover:shadow-[0_0_35px_rgba(37,211,102,0.4)] transition-all duration-300"
             >
               <MessageCircle size={17} />

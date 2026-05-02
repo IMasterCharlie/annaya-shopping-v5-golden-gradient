@@ -20,5 +20,6 @@ export function getWhatsAppUrl(
   price: number
 ) {
   let message = `Hello Annaya Boutique! 🛍️\nI'd love to order: *${productName}*\nSize: ${size} | Color: ${color}\nPrice: ${formatPrice(price)}\n\nPlease confirm availability!`;
-  return `https://wa.me/917494954286?text=${encodeURIComponent(message)}`;
+  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
